@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Syles -->
+    <style>
+      .poppins {
+        font-family: "Poppins";
+      }
+      .script {
+        font-family: "Kaushan Script";
+      }
+    </style>
+    <title>Restaurant Site</title>
+    <!-- to be edited -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav class="fixed min-w-full z-10">
+      <!-- Desktop -->
+      <div class="container-2xl bg-gray-200 px-2 border-b-2 border-gray-100">
+        <div class="flex justify-between items-center px-4 py-3">
+          <div class="logo flex space-x-2 items-center">
+            <svg
+              id="logo-39"
+              width="50"
+              height="40"
+              viewBox="0 0 50 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M25.0001 0L50 15.0098V24.9863L25.0001 40L0 24.9863V15.0099L25.0001 0Z"
+                fill="#A5B4FC"
+                class="ccompli2"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0 15.0098L25 0L50 15.0098V24.9863L25 40L0 24.9863V15.0098ZM25 33.631L44.6967 21.8022V18.1951L44.6957 18.1945L25 30.0197L5.30426 18.1945L5.3033 18.1951V21.8022L25 33.631ZM25 24.5046L40.1018 15.4376L36.4229 13.2298L25 20.0881L13.5771 13.2298L9.89822 15.4376L25 24.5046ZM25 14.573L31.829 10.4729L25 6.37467L18.171 10.4729L25 14.573Z"
+                fill="#4F46E5"
+                class="ccustom"
+              ></path>
+              <path
+                d="M25.0001 0L0 15.0099V24.9863L25 40L25.0001 0Z"
+                fill="#A5B4FC"
+                class="ccompli2"
+                fill-opacity="0.2"
+              ></path>
+            </svg>
+            <h2 class="poppins text-2xl font-semibold" style="color: #4f46e5">
+              Restaurant
+            </h2>
+          </div>
+          <div
+            class="
+              primaryNav
+              font-bold
+              flex
+              items-center
+              poppins
+              space-x-8
+              hidden
+              lg:flex
+            "
+            style="color: #4f46e5"
+          >
+            <h3><a href="">Home</a></h3>
+            <h3><a href="">Locations</a></h3>
+            <h3><a href="">About</a></h3>
+          </div>
+          <div class="secNav hidden lg:flex">
+            <button class="poppins font-bold bg-gray-500 px-3 py-2 rounded-lg">
+              Order Now !
+            </button>
+          </div>
+
+          <div class="flex lg:hidden menu-icon cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 cursor-pointer"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="#4F46E5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </div>
+        </div>
+        <!-- mobile menu -->
+
+        <div
+          class="py-1 hidden transition-all delay-150 ease-linear lg:hidden"
+          id="mobileMenu"
+          style="color: #4f46e5"
+        >
+          <h2
+            class="
+              text-center
+              py-2
+              font-bold
+              poppins
+              hover:bg-gray-300
+              rounded-lg
+            "
+          >
+            Home
+          </h2>
+          <h2
+            class="
+              text-center
+              py-2
+              font-bold
+              poppins
+              hover:bg-gray-300
+              rounded-lg
+            "
+          >
+            Locations
+          </h2>
+          <h2
+            class="
+              text-center
+              py-2
+              font-bold
+              poppins
+              hover:bg-gray-300
+              rounded-lg
+            "
+          >
+            About
+          </h2>
+          
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="header">
+      <div
+        class="
+          container-2xl
+          flex flex-col
+          items-center
+          justify-center
+          min-h-screen
+        "
+      >
+        <h1 class="text-5xl poppins font-semibold" style="color: #4f46e5">
+          Restaurant
+        </h1>
+
+        <div
+          class="flex space-x-2 flex-wrap justify-center items-center mt-2"
+          style="width: 50%"
+        >
+          <p
+            class="
+              poppins
+              font-bold
+              text-gray-500
+              px-2
+              text-xs
+              bg-gray-300
+              rounded-full
+              py-0.5
+              mt-2
+              hover:bg-gray-400
+              transition-all
+              delay-100
+              cursor-default
+              ease-in-out
+              hover:text-gray-600
+            "
+          >
+            North Indian
+          </p>
+
+          <p
+            class="
+              poppins
+              font-bold
+              text-gray-500
+              px-2
+              text-xs
+              bg-gray-300
+              rounded-full
+              py-0.5
+              mt-2
+              hover:bg-gray-400
+              transition-all
+              delay-100
+              cursor-default
+              ease-in-out
+              hover:text-gray-600
+            "
+          >
+            South Indian
+          </p>
+
+          <p
+            class="
+              poppins
+              font-bold
+              text-gray-500
+              px-2
+              text-xs
+              bg-gray-300
+              rounded-full
+              py-0.5
+              mt-2
+              hover:bg-gray-400
+              transition-all
+              delay-100
+              cursor-default
+              ease-in-out
+              hover:text-gray-600
+            "
+          >
+            Chinese
+          </p>
+
+          <p
+            class="
+              poppins
+              font-bold
+              text-gray-500
+              px-2
+              text-xs
+              bg-gray-300
+              rounded-full
+              py-0.5
+              mt-2
+              hover:bg-gray-400
+              transition-all
+              delay-100
+              cursor-default
+              ease-in-out
+              hover:text-gray-600
+            "
+          >
+            Arabic
+          </p>
+
+          <p
+            class="
+              poppins
+              font-bold
+              text-gray-500
+              px-2
+              text-xs
+              bg-gray-300
+              rounded-full
+              py-0.5
+              mt-2
+              hover:bg-gray-400
+              transition-all
+              delay-100
+              cursor-default
+              ease-in-out
+              hover:text-gray-600
+            "
+          >
+            Non-Veg
+          </p>
+
+          <p
+            class="
+              poppins
+              font-bold
+              text-gray-500
+              px-2
+              text-xs
+              bg-gray-300
+              rounded-full
+              py-0.5
+              mt-2
+              hover:bg-gray-400
+              transition-all
+              delay-100
+              cursor-default
+              ease-in-out
+              hover:text-gray-600
+            "
+          >
+            Vegan
+          </p>
+        </div>
+
+        <div
+          class="
+            text-center
+            poppins
+            text-sm
+            font-medium
+            opacity-60
+            mt-4
+            sm:px-5
+            px-2
+            md:px-9
+            lg:px-28
+          "
+        >
+          <p class="">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus perferendis repellendus quam veritatis exercitationem
+            ducimus id aspernatur, vitae animi adipisci?
+          </p>
+        </div>
+
+        <div class="flex space-x-7">
+          <button
+            class="
+              poppins
+              font-bold
+              bg-gray-400
+              opacity-80
+              px-5
+              py-2
+              rounded-lg
+              flex
+              justify-center
+              items-center
+              mt-5
+              focus:ring-blue-300 focus:ring-4
+            "
+            style="background-color: #4f46e5; color: #b1beff"
+          >
+            Menu Card    
+          </button>
+
+          <button
+            class="
+              lg:hidden
+              poppins
+              font-bold
+              bg-gray-400
+              opacity-80
+              px-5
+              py-2
+              rounded-lg
+              flex
+              justify-center
+              items-center
+              mt-5
+              focus:ring-blue-300 focus:ring-4
+            "
+            style="background-color: #4f46e5; color: #b1beff"
+          >
+            Order Now !
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Menu Card -->
+    <section class=" bg-gray-100 flex flex-col items-center py-8 ">
+        <header class="poppins text-2xl opacity-60 font-bold ">Menu Card</header>
+
+        <div class="">
+           <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:grid-rows-2 lg:px-3">
+                <!-- Card-1 -->
+            <div class="card-1 px-2">
+                <div class="flex poppins mt-12 bg-white rounded-lg w-72 md:w-80 shadow-sm flex-col">
+                    <img src="./img/hero.jpg" width="" height="" alt="" class="h-48 rounded">
+
+                    <h2 class="text-xl text-gray-600 px-2 font-semibold py-2">Vegeterian</h2>
+
+                    <p class="px-2 text-gray-500 py-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, expedita. Lorem ipsum dolor sit amet.</p>
+                    <div class="mx-2 text-gray-400  flex items-center mt-1">
+                        <button class="bg-gray-900 px-2 py-1 mb-4 rounded-md font-semibold">Full Menu
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -2 -->
+
+            <div class="card-1 px-2">
+                <div class="flex poppins mt-12 bg-white rounded-lg h-96 w-72 md:w-80 shadow-sm flex-col">
+                    <img src="./img/hero.jpg" width="" height="" alt="" class="h-48 rounded">
+
+                    <h2 class="text-xl text-gray-600 px-2 font-semibold py-2">Vegeterian</h2>
+
+                    <p class="px-2 text-gray-500  py-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, expedita. Lorem ipsum dolor sit amet.</p>
+                    <div class="mx-2 text-gray-400  flex items-center mt-1">
+                        <button class="bg-gray-900 mb-4 px-2 py-1 rounded-md font-semibold">Full Menu
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Card-3 -->
+            <div class="card-1 px-2 lg:row-span-2 ">
+                <div class="flex poppins mt-12 bg-white rounded-lg w-72 md:w-80 shadow-sm flex-col">
+                    <img src="./img/hero.jpg" width="" height="" alt="" class="h-48 rounded">
+
+                    <h2 class="text-xl text-gray-600 px-2 font-semibold py-2">Vegeterian</h2>
+
+                    <p class="px-2 text-gray-500  py-2">Lorem fgh  dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, est. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, expedita. Lorem ipsum dolor sit amet. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, culpa amet eos totam est debitis, magni doloremque molestiae a eaque inventore sunt? Est quos corrupti beatae nulla vel recusandae Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate natus sit blanditiis nostrum fugit ipsam magnam vel quia incidunt eveniet, deserunt velit, vero animi! Voluptas porro aliquam eos amet eligendi aut. Labore aspernatur eum suscipit! </p>
+                    <div class="mx-2 text-gray-400  flex items-center mt-1">
+                        <button class="mb-3 bg-gray-900 px-2 py-1 rounded-md font-semibold">Full Menu
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- cArd-4 -->
+            <div class="card-1 px-2">
+                <div class="flex poppins mt-12 bg-white rounded-lg h-96 w-72 md:w-80 shadow-sm flex-col">
+                    <img src="./img/hero.jpg" width="" height="" alt="" class="h-48 rounded">
+
+                    <h2 class="text-xl text-gray-600 px-2 font-semibold py-2">Vegeterian</h2>
+
+                    <p class="px-2 text-gray-500  py-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, expedita. Lorem ipsum dolor sit amet.</p>
+                    <div class="mx-2 text-gray-400  flex items-center mt-1">
+                        <button class="bg-gray-900 px-2 py-1 rounded-md font-semibold mb-4">Full Menu
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Card-5 -->
+            
+            <div class="card-1 px-2">
+                <div class="flex poppins mt-12 bg-white rounded-lg h-96 w-72 md:w-80 shadow-sm flex-col">
+                    <img src="./img/hero.jpg" width="" height="" alt="" class="h-48 rounded">
+
+                    <h2 class="text-xl text-gray-600 px-2 font-semibold py-2">Vegeterian</h2>
+
+                    <p class="px-2 text-gray-500 py-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, expedita. Lorem ipsum dolor sit amet.</p>
+                    <div class="mx-2 text-gray-400  flex items-center mt-1">
+                        <button class="bg-gray-900 px-2 py-1 rounded-md font-semibold mb-4">Full Menu
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+           </div>
+        </div>
+    </section>
+    <!-- A5B4FC -->
+
+    <!-- Locations -->
+
+    <section class="bg-gray-200 px-0.5 md:px-5" id="locations">
+        <div class="flex flex-col pt-4 pb-2 items-center ">
+          <h2 class="font-bold poppins text-3xl text-gray-900  text-center opacity-70 mt-2">Locations</h2>
+          <div class="min-w-full container-2xl py-8 flex justify-center items-center flex-col">
+              <p class="poppins font-bold text-xl text-center text-gray-800">We're Loacted at ...</p>
+
+
+              <p class="flex items-center flex-wrap justify-center poppins py-2 font-semibold text-lg text-gray-700">
+
+
+                Chennai <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+
+                Kolkata <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+
+                Mumbai <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+
+                Delhi <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+
+                Banglore <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+
+                Hyderabad <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+
+                Hosur <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+
+                And 70+ Restaurants all-over India
+
+
+
+
+
+              </p>
+
+              <button class="px-3 py-2 mt-4 font-bold poppins flex items-center rounded-md focus:ring-4" style="background-color: #4e46e5e7; color: #c5cfff">Find a Restaurant near me
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 ml-2 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              
+              
+              </button>
+          </div>
+       </div>
+    </section>
+
+    <!-- About -->
+
+    <section class="bg-gray-100 " id="about">
+        <div class="flex flex-col items-center py-4">
+            <p class="poppins text-2xl font-bold text-gray-800">About Us</p>
+            <div class="flex poppins items-center justify-center flex-col my-4">
+              <p class="text-center mx-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo quisquam pariatur perferendis quod? Dignissimos veniam sapiente aperiam rem deserunt unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus commodi totam eius qui debitis nemo cum, error quisquam quidem maxime est autem, obcaecati omnis dolorum? Error officia doloremque mollitia?</p>
+
+              <p class="font-medium poppins text-center text-2xl my-4">Services</p>
+
+              <p class="flex font-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>Restaurants
+                
+                
+                <div class="flex font-medium pt-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>Stalls
+                </div>
+
+                <div class="flex font-medium pt-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>Franchises
+                </div>
+
+                <div class="flex font-medium pt-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>Sweets
+                </div>
+
+                <div class="flex font-medium pt-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>Hotels
+                </div>
+
+                <div class="flex font-medium pt-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>Bakeries
+                </div>
+              </p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="footer" class="bg-gray-900  text-gray-400 relative">
+      <div class="flex flex-col justify-center">
+
+        <!-- 1 -->
+
+        <div class="flex  items-center justify-center lg:justify-evenly flex-wrap poppins">
+          
+          <!-- 1 -->
+
+          <div class="flex flex-col space-y-3 py-4">
+            <p class="poppins text-2xl px-2 font-bold text-center">Contact</p>
+            <p class="flex font-medium">
+              <svg xmlns="http://www.w3.org/2000/svg" class=" mx-2 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>1234567890
+            </p>
+
+            <p class="flex font-medium">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mx-2 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>king@whitewalkers.org
+            </p>
+
+            <p class="flex font-medium">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mx-2 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>No 92, North, Winterfell, Westeros-981
+            </p>
+
+
+
+        </div>
+
+        <!-- 2 -->
+          <div class="flex flex-col space-y-3 py-4 px-4 w-3/4 lg:w-2/6 items-center">
+            <!-- 1 -->
+            <p class="font-bold text-2xl text-center">Wanna Own a Franchise ?</p>
+            <p class="text-center text-md font-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet et exercitationem ratione cum soluta esse!</p>
+            <button class="rounded-md py-0.5 w-52" style="background-color: #4e46e5e7;
+            color: #c5cfff;">Contact Us</button>
+          </div>
+
+         
+
+
+
+
+
+
+
+      </div>
+
+       <!-- social icons -->
+
+       <div class="icons flex space-x-4 justify-center items-center pt-3 pb-6">
+        <svg  class="h-5  cursor-pointer hover:opacity-80 transition-all delay-100 ease-out" role="img" viewBox="0 0 24 24" fill="#c5cfff"  xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+
+        <svg class="h-5 hover:opacity-80 cursor-pointer transition-all delay-100 ease-out"  role="img" viewBox="0 0 24 24" fill="#c5cfff"  xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+
+        <svg class="h-5 hover:opacity-80 cursor-pointer transition-all delay-100 ease-out"  role="img" viewBox="0 0 24 24" fill="#c5cfff"  xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+
+        <svg class="h-5 hover:opacity-80 cursor-pointer transition-all delay-100 ease-out"  role="img" viewBox="0 0 24 24" fill="#c5cfff"  xmlns="http://www.w3.org/2000/svg"><title>Swiggy</title><path d="M12.034 24c-.376-.411-2.075-2.584-3.95-5.513-.547-.916-.901-1.63-.833-1.814.178-.48 3.355-.743 4.333-.308.298.132.29.307.29.409 0 .44-.022 1.619-.022 1.619a.441.441 0 1 0 .883-.002l-.005-2.939c0-.255-.278-.319-.331-.329-.511-.002-1.548-.006-2.661-.006-2.457 0-3.006.101-3.423-.172-.904-.591-2.383-4.577-2.417-6.819C3.849 4.964 5.723 2.225 8.362.868A8.13 8.13 0 0 1 12.026 0c4.177 0 7.617 3.153 8.075 7.209l.001.011c.084.981-5.321 1.189-6.39.904-.164-.044-.206-.212-.206-.284L13.5 4.996a.442.442 0 0 0-.884.002l.009 3.866a.33.33 0 0 0 .268.32l3.354-.001c1.79 0 2.542.207 3.042.588.333.254.461.739.349 1.37C18.633 16.755 12.273 23.71 12.034 24z"/></svg>
+
+
+        <svg class="h-5 hover:opacity-80 cursor-pointer transition-all delay-100 ease-out" role="img" viewBox="0 0 24 24" fill="#c5cfff"  xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </div>
+
+      <div class="antialiased btn-g2p absolute p-2 rounded-full  h-12 w-12 flex justify-center items-center hover:opacity-75 transition-all ease-out delay-75 cursor-pointer" style="background-color:#c5cfff ;bottom: 10px ;right:
+      10px;">
+
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#4e46e5e7">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+          </svg>
+        </button>
+      </div>
+
+    </footer>
+
+
+
+    <script src="./script.js"></script>
+  </body>
+</html>
